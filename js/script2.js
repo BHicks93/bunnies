@@ -71,4 +71,10 @@ $(document).ready(function(){
 	$('.bunny').each(function() {
 		moveRandom($(this));
 	});
+	$('body').click(function() {
+    	$('.bunny').effect('bounce', 500);
+	});
+	$(document).mousemove(function(e){
+        $("#image").css({left:e.pageX, top:e.pageY});
+    });
 });

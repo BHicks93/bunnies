@@ -2,26 +2,26 @@ $(document).ready(function(){
 	//all jQuery code goes here
 	console.log("Hi there buddy");
 	
-	//$('selector').function(actions you want to happen);
-		//jQuary + css selector + action
-	$('#myimage').mouseenter(function() {
+    // have img follow mouse
+    $(document).mousemove(function(e){
+        $("#image").css({left:e.pageX, top:e.pageY});
+    });
+
+	//have the bunny bounce when you mouse over it
+	$('#myimage, #myimage1, #myimage2, #myimage3, #myimage4, #myimage5, #myimage6, #myimage7, #myimage8, #myimage9, #myimage10, #myimage11, #myimage12, #myimage13, #myimage14, #myimage15, #myimage16, #myimage17, #myimage18, #myimage19, #myimage20, #myimage21, #myimage22, #myimage23, #myimage24, #myimage25, #myimage26, #myimage27, #myimage28, #myimage29, #myimage30, #myimage31, #myimage32, #myimage33, #myimage34, #myimage35, #myimage36, #myimage37, #myimage38, #myimage39, #myimage40, #myimage41, #myimage42, #myimage43, #myimage44, #myimage45, #myimage46, #myimage47, #myimage48, #myimage49, #myimage50, #myimage51, #myimage52, #myimage53, #myimage54, #myimage55, #myimage56, #myimage57, #myimage58, #myimage59, #myimage60, #myimage61, #myimage62, #myimage63, #myimage64, #myimage65, #myimage66, #myimage67, #myimage68, #myimage69, #myimage70, #myimage71, #myimage72, #myimage73, #myimage74, #myimage75, #myimage76, #myimage77, #myimage78, #myimage79, #myimage80, #myimage81, #myimage82, #myimage83, #myimage84, #myimage85, #myimage86, #myimage87, #myimage88, #myimage89, #myimage90, #myimage91, #myimage92, #myimage93, #myimage94, #myimage95, #myimage96, #myimage97, #myimage98, #myimage99, #myimage100').mouseenter(function() {
     	$(this).effect('bounce', 500);
 		});
+
+    //breed bunnies bitches! bang bang
 	$('#myimage').one("mouseenter", function() {
     		$('#myimage1').css("display", "block")
     	});
 
-	$('#myimage1').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
 	$('#myimage1').one("mouseenter", function() {
     		$('#myimage2').css("display", "block")
     		$('#myimage3').css("display", "block")
     	});
 
-	$('#myimage2').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
 	$('#myimage2').one("mouseenter", function() {
     		$('#myimage4').css("display", "block")
     		$('#myimage5').css("display", "block")
@@ -29,9 +29,6 @@ $(document).ready(function(){
     		$('#myimage7').css("display", "block")
     	});
 
-	$('#myimage3').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
 	$('#myimage3').one("mouseenter", function() {
     		$('#myimage8').css("display", "block")
     		$('#myimage9').css("display", "block")
@@ -43,9 +40,6 @@ $(document).ready(function(){
     		$('#myimage15').css("display", "block")
     	});
 
-	$('#myimage4').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
 	$('#myimage4').one("mouseenter", function() {
     		$('#myimage16').css("display", "block")
     		$('#myimage17').css("display", "block")
@@ -65,9 +59,6 @@ $(document).ready(function(){
     		$('#myimage31').css("display", "block")
     	});
 
-	$('#myimage5').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
 	$('#myimage5').one("mouseenter", function() {
     		$('#myimage32').css("display", "block")
     		$('#myimage33').css("display", "block")
@@ -102,9 +93,7 @@ $(document).ready(function(){
     		$('#myimage62').css("display", "block")
     		$('#myimage63').css("display", "block")
     	});
-	$('#myimage6').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
+
 	$('#myimage6').one("mouseenter", function() {
 			$('#myimage64').css("display", "block")
     		$('#myimage65').css("display", "block")
@@ -171,9 +160,7 @@ $(document).ready(function(){
     		$('#myimage126').css("display", "block")
     		$('#myimage127').css("display", "block")
     	});
-	$('#myimage7').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
+
 	$('#myimage7').one("mouseenter", function() {
 			$('#myimage128').css("display", "block")
     		$('#myimage129').css("display", "block")
@@ -304,9 +291,7 @@ $(document).ready(function(){
     		$('#myimage254').css("display", "block")
     		$('#myimage255').css("display", "block")
     	});
-	$('#myimage8').mouseenter(function() {
-    	$(this).effect('bounce', 500);
-		});
+
 	$('#myimage8').one("mouseenter", function() {
     		$('#myimage256').css("display", "block")
     		$('#myimage257').css("display", "block")
@@ -353,10 +338,9 @@ $(document).ready(function(){
     		$('#myimage298').css("display", "block")
     		$('#myimage299').css("display", "block")
     		$('#myimage300').css("display", "block")
-
-
     	});
 
+        console.log("Wow that is a lot of bunnies. No more.");
 
 		function randomFromTo(from, to){
 			return Math.floor(Math.random() * (to - from + 1) + from);
@@ -391,7 +375,7 @@ $(document).ready(function(){
 			obj.animate({
 				top: newY,
 				left: newX
-				}, 10000, function() {
+				}, Math.random()*8000+500, function() {
           			moveRandom(obj);
 			});
 		}

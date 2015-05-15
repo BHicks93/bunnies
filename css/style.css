@@ -1,6 +1,6 @@
 body{ 
-	cursor: url('../cursor.cur'), 
-	auto; margin: 0;
+	cursor: none; /*url('../cursor.cur'), auto;*/ 
+    margin: 0;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -20,4 +20,9 @@ body{
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
+}
+#image{
+position:absolute;
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
 }
