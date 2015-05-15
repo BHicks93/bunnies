@@ -7,7 +7,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-image: url('http://th08.deviantart.net/fs71/PRE/f/2010/258/2/a/free_perspective_grass_image_by_mtprower-d2yrz9y.jpg')
+    background-color: pink;
 }
 #container{  
 	display: block;
@@ -15,7 +15,6 @@ body{
 	height: 100%;
 	}
 .bunny { 
-	width: 31px;
     background: transparent;
     position: absolute;
     top: 50%;
